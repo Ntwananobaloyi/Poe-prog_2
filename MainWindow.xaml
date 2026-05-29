@@ -7,6 +7,112 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-       
+        <!--Home Grid 
+   This grid serves as the main page of the application, it 
+  contains a welcome message, logo and voice users 
+  -->
+        <Grid x:Name="home_grid" Visibility="Visible" Margin="0,10,0,-10">
+            <!--Logo-->
+            <Image 
+          Source="/logo.png" 
+          Height="250"
+          Width="300"
+          Margin="0,0,0,200"
+          />
+            <!--Welcome Message-->
+            <TextBlock   
+          Text="Welcome to CyberAwareness Chatbot, click continue button" 
+          
+          Height="20"
+          Width="400"
+          TextAlignment="Center"
+          Margin="0,50,0,0"
+          FontFamily="Arial Rounded MT Bold" 
+          />
+            <!-- button to continue -->
+            <Button
+          
+          Content="Start Application"
+          Height="40"
+          Width="300"
+          Margin="0,200,0,0"
+          Click="proceed" 
+          Background="LightPink"
+          
+          />
         </Grid>
+        <!-- Username Grid for prompting the user for the username -->
+        <Grid x:Name="username_grid" Visibility="Hidden">
+            <!-- Logo-->
+            <Image
+          Source="/logo.png"
+          Height="200"
+          Width="300"
+          Margin="0,0,0,200"
+          />
+            <!--Hint Message-->
+            <TextBlock
+            Text=" Please enter your username to continue"
+           Foreground="BlueViolet"
+            Height="20" 
+            Width="400"
+            TextAlignment="Center"
+            Margin="0,30,0,0"
+           FontFamily="Arial Rounded MT Bold"
+           />
+
+            <!--Enter/promp for username-->
+            <TextBox
+          Height="40"
+          Width="270"
+          Margin="0,100,0,0"
+          FontFamily="Arial Rounded MT Bold"
+          x:Name="usernames_input"
+          />
+            <!-- error message -->
+            <TextBlock
+            
+             Height="20"
+             Width="270"
+             TextAlignment="Justify"
+             Margin="0,180,0,0"
+          Foreground="AliceBlue"
+              FontFamily="Arial Rounded MT Bold"
+             />
+            <!--button to submit name-->
+            <Button 
+           Height="40"
+           Width="270"
+           Margin="0,250,0,0"
+           Content="Submit"
+           Click="submit_name"
+          Background="LightPink" 
+           />
+        </Grid>
+        <!--Chatbot Grid for the chatbot interface-->
+        <Grid x:Name="chat_grid" Visibility="Hidden">
+            <!--listview to show messages-->
+            <ListView
+           x:Name="chats"
+           Height="300"
+           Margin="0,0,0,120"
+           />
+            <!--textbox to prompt questions-->
+            <TextBox 
+          x:Name="question"
+            Height="50"
+            Width="480"
+            Margin="0,300,300,0"
+            />
+
+            <Button
+           Height="50"
+           Width="280"
+           Margin="490,300,0,0"
+           Content="Submit Question"
+           Click="send"
+          Background="LightPink" 
+         />
+        </Grid>
+    </Grid>
 </Window>
