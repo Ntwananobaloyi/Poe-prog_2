@@ -4,7 +4,7 @@ using System.Media;
 namespace Poe_2
 {//start of namespace
     public class voice_greeting
-    {//start of class
+    {//start of class 
 
         //void method to play the sound named greet
         public void greet()
