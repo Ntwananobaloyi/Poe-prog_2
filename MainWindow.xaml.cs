@@ -23,6 +23,15 @@ namespace Poe_2
         public MainWindow()
         {  
             InitializeComponent();
+
+            new responses(reply, ignore) { };
+
+            //creating an instance for the class voice_greeting 
+            //with an object name greet
+            voice_greeting greet = new voice_greeting();
+
+            //call the voice method
+            greet.greet(); 
         }
     }
 }
