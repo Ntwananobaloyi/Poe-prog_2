@@ -31,7 +31,7 @@ namespace Poe_2
             voice_greeting greet = new voice_greeting();
 
             //call the voice method
-            greet.greet(); 
+            greet.greet();  
         }
     }
 }
