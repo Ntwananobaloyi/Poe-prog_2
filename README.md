@@ -92,5 +92,5 @@ Visual Studio 2022 or later
 Windows Operating System
 Steps
 Clone the repository:
-git clone https://github.com/yourusername/cybersecurity-awareness-chatbot.git
+https://github.com/Ntwananobaloyi/Poe-prog_2.git 
 Open the solution in Visual Studio.
